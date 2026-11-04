@@ -1,0 +1,57 @@
+alexrianna@yandex.ru
+Wishmaster
+
+
+
+
+{
+  "key": "JRBU8neVGB5jasI5xSLrnUyNt0Xo2pa4fao4diNAE6djOwGnaLvXrXahEZNZu5qk"
+}
+
+
+
+
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "routerai": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "RouterAI",
+      "options": {
+        "baseURL": "https://routerai.ru/api/v1",
+        "apiKey": "sk-A2SS73HyvvMlUiGeU8n1SvmCc3yy-xT8"
+      },
+      "models": {
+        "deepseek/deepseek-v3.2": { "name": "DeepSeek V3.2" },
+        "deepseek/deepseek-v4-flash": { "name": "DeepSeek V4 Flash" },
+        "qwen/qwen3-coder-next": { "name": "Qwen3 Coder Next" },
+        "z-ai/glm-5.1": { "name": "GLM 5.1" },
+        "minimax/minimax-m2.5": { "name": "MiniMax M2.5" }
+      }
+    }
+  },
+  "model": "deepseek/deepseek-v3.2",
+  "small_model": "qwen/qwen3-coder-next",
+  "default_agent": "plan",
+  "mcp": {
+    "redmine": {
+      "type": "remote",
+      "url": "https://redmine-mcp.lab.vistar.ru/mcp",
+      "enabled": true,
+      "headers": {
+        "Authorization": "Bearer b302815786aa886284de5f7b2b3b1dc5f3fa06da"
+      }
+    },
+    "gitlab-api": {
+      "type": "remote",
+      "url": "https://gitlab.vistar.ru/api/v4/mcp",
+      "enabled": false
+    },
+    "apicurio": {
+      "type": "local",
+      "enabled": false,
+      "command": [],
+      "environment": {}
+    }
+  }
+}
