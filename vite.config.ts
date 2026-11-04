@@ -10,9 +10,10 @@ export default defineConfig({
     target: 'es2020',
     outDir: 'dist',
     assetsDir: 'assets',
-    sourcemap: false
+    sourcemap: false,
+    emptyOutDir: true
   },
-  base: '/maze-game/',
+  base: './',
   optimizeDeps: {
     include: ['phaser']
   }

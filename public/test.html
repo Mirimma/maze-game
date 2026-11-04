@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maze Game - Deploy Test</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 2rem;
+        font-family: monospace;
+        background: #111;
+        color: #0f0;
+      }
+      h1 { color: #fff; }
+      .status { 
+        padding: 1rem;
+        margin: 1rem 0;
+        border: 1px solid #0f0;
+        background: #222;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Maze Game Deploy Test</h1>
+    <div class="status">If you see this, GitHub Pages is working!</div>
+    <div>Build time: <span id="time"></span></div>
+    <script>
+      document.getElementById('time').textContent = new Date().toLocaleString();
+    </script>
+  </body>
+</html>

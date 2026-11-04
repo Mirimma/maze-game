@@ -5,9 +5,55 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maze Game</title>
+    <style>
+      :root {
+        font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+        line-height: 1.5;
+        font-weight: 400;
+
+        color-scheme: light dark;
+        color: rgba(255, 255, 255, 0.87);
+        background-color: #242424;
+
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      body {
+        margin: 0;
+        display: flex;
+        place-items: center;
+        min-width: 320px;
+        min-height: 100vh;
+      }
+
+      #app {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 2rem;
+        text-align: center;
+      }
+      
+      .success {
+        color: #4CAF50;
+        font-size: 1.5em;
+        margin: 2rem 0;
+      }
+    </style>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <div id="app">
+      <h1>🎮 Maze Game</h1>
+      <div class="success">✅ GitHub Pages deployment successful!</div>
+      <p>This is a test deployment for the maze game project.</p>
+      <p>Phaser.js + TypeScript + Vite</p>
+      <p>Deployed: <span id="deploy-time"></span></p>
+    </div>
+    <script>
+      document.getElementById('deploy-time').textContent = new Date().toLocaleString();
+      console.log('Maze Game deployed successfully!');
+    </script>
   </body>
 </html>

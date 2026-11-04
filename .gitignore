@@ -40,3 +40,7 @@ coverage/
 *.tmp
 *.temp
 *~
+
+# Не коммитить lock файлы для совместной разработки
+package-lock.json
+yarn.lock
