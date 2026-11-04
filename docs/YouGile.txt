@@ -1,3 +1,7 @@
+Все workflow файлы созданы и готовы к запуску. Нужно только запустить их через GitHub интерфейс или сделать push.
+
+
+
 alexrianna@yandex.ru
 Wishmaster
 
