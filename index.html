@@ -2,58 +2,95 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maze Game</title>
     <style>
-      :root {
-        font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-        line-height: 1.5;
-        font-weight: 400;
-
-        color-scheme: light dark;
-        color: rgba(255, 255, 255, 0.87);
-        background-color: #242424;
-
-        font-synthesis: none;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-
       body {
         margin: 0;
+        padding: 0;
         display: flex;
-        place-items: center;
-        min-width: 320px;
+        justify-content: center;
+        align-items: center;
         min-height: 100vh;
+        background-color: #121212;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       }
-
-      #app {
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 2rem;
+      
+      .container {
         text-align: center;
       }
       
-      .success {
+      h1 {
         color: #4CAF50;
-        font-size: 1.5em;
-        margin: 2rem 0;
+        margin-bottom: 10px;
+      }
+      
+      .game-wrapper {
+        position: relative;
+        width: 950px;
+        height: 600px;
+        margin: 20px auto;
+        border: 3px solid #333;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: #1a1a1a;
+      }
+      
+      #phaser-game {
+        width: 100%;
+        height: 100%;
+      }
+      
+      .loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        color: #4CAF50;
+      }
+      
+      .controls {
+        margin-top: 15px;
+        color: #888;
+        font-size: 14px;
+      }
+      
+      .key {
+        display: inline-block;
+        background-color: #333;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: monospace;
+        margin: 0 2px;
       }
     </style>
   </head>
   <body>
-    <div id="app">
-      <h1>🎮 Maze Game</h1>
-      <div class="success">✅ GitHub Pages deployment successful!</div>
-      <p>This is a test deployment for the maze game project.</p>
-      <p>Phaser.js + TypeScript + Vite</p>
-      <p>Deployed: <span id="deploy-time"></span></p>
+    <div class="container">
+      <h1>Maze Game</h1>
+      
+      <div class="game-wrapper">
+        <div id="phaser-game"></div>
+        <div id="loading-text" class="loading">Loading game...</div>
+      </div>
+      
+      <div class="controls">
+        Controls: <span class="key">W</span> <span class="key">A</span> <span class="key">S</span> <span class="key">D</span> or <span class="key">↑</span> <span class="key">←</span> <span class="key">↓</span> <span class="key">→</span>
+      </div>
     </div>
-    <script>
-      document.getElementById('deploy-time').textContent = new Date().toLocaleString();
-      console.log('Maze Game deployed successfully!');
+    
+    <script type="module">
+      import './src/main.ts'
+      
+      document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+          const loadingText = document.getElementById('loading-text')
+          if (loadingText) {
+            loadingText.style.display = 'none'
+          }
+        }, 1000)
+      })
     </script>
   </body>
 </html>
